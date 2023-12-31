@@ -1,31 +1,36 @@
 {
-	"env": {
-		"browser": true,
-		"es2021": true
-	},
-	"extends": [
-		"plugin:react/recommended",
-		"airbnb",
-		"prettier",
-		"plugin:react/jsx-runtime"
-	],
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": "latest",
-		"sourceType": "module"
-	},
-	"plugins": ["react"],
-	"rules": {
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-		"react/prop-types": 0,
-		"react/destructuring-assignment": [0]
-	},
-  	"eslint.nodePath": "/Users/<USERNAME>/.nvm/versions/node/v14.15.5/lib",
- 	"eslint.options": {
-    "overrideConfigFile": "/Users/<USERNAME>/.eslintrc"
-  	},
-	"eslint.validate": [ "javascript", "javascriptreact", "html", "typescriptreact" 
-	]
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:react/jsx-runtime"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": 0,
+    "react/destructuring-assignment": [0],
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "includeInternal": true, "includeTypes": true }
+    ],
+    "consistent-return": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "default-param-last": 0,
+    "no-param-reassign": "off"
+  }
 }
